@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="scannermaui.Views.CartPage"
+             Title="Cart"
+             BackgroundColor="#F5F5F5">
+
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Text="Your Cart" 
+               FontSize="28" 
+               FontAttributes="Bold"
+               TextColor="Black"
+               HorizontalOptions="Center"
+               Margin="0,0,0,10"/>
+
+       
+        <CollectionView x:Name="CartListView"
+                        ItemsSource="{Binding CartItems}"
+                        SelectionMode="None"
+                        Grid.Row="1"
+                        BackgroundColor="Transparent">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="15"
+                           Margin="0,8"
+                           BackgroundColor="White"
+                           CornerRadius="10"
+                           HasShadow="True">
+                        <Grid ColumnDefinitions="*, Auto"
+                              VerticalOptions="Center">
+
+                            <StackLayout Grid.Column="0"
+                                         VerticalOptions="Center"
+                                         Padding="5,0">
+                                <Label Text="{Binding ProductName}" 
+                                       FontSize="18" 
+                                       FontAttributes="Bold" 
+                                       TextColor="Black"/>
+                                <Label Text="{Binding Quantity, StringFormat='Quantity: {0}'}"
+                                       FontSize="16"
+                                       TextColor="Gray"/>
+                            </StackLayout>
+
+                            <Button Text="Remove" 
+                                    FontSize="14"
+                                    BackgroundColor="#FF4757"
+                                    TextColor="White"
+                                    WidthRequest="80"
+                                    HeightRequest="35"
+                                    CornerRadius="5"
+                                    Command="{Binding Source={x:Reference CartListView}, Path=BindingContext.RemoveFromCartCommand}"
+                                    CommandParameter="{Binding .}"
+                                    VerticalOptions="Center"
+                                    Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Frame CornerRadius="15"
+       HasShadow="True"
+       Padding="20"
+       BackgroundColor="#6A11CB"
+       Grid.Row="2"
+       Margin="0,20,0,0"
+       HorizontalOptions="FillAndExpand">
+
+            <StackLayout Orientation="Horizontal"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+
+             
+                <Image Source="cart_icon.png" 
+               WidthRequest="24"
+               HeightRequest="24"
+               Margin="0,0,10,0"/>
+
+              
+                <Label Text="{Binding CartItems.Count, StringFormat='Total Items: {0}'}"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="White"
+               VerticalOptions="Center"/>
+            </StackLayout>
+        </Frame>
+
+    </Grid>
+</ContentPage>

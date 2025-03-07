@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	<style name="Maui.SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+		<item name="android:windowBackground">@drawable/splash</item>
+	</style>
+</resources>

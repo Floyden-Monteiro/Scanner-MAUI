@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "scannermaui", "scannermaui\scannermaui.csproj", "{E8A7F957-53C3-411D-81D7-25F993ADAF5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8A7F957-53C3-411D-81D7-25F993ADAF5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8A7F957-53C3-411D-81D7-25F993ADAF5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8A7F957-53C3-411D-81D7-25F993ADAF5A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E8A7F957-53C3-411D-81D7-25F993ADAF5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8A7F957-53C3-411D-81D7-25F993ADAF5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8A7F957-53C3-411D-81D7-25F993ADAF5A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {545A78FB-9317-4654-BC2D-76E4FB732300}
+	EndGlobalSection
+EndGlobal

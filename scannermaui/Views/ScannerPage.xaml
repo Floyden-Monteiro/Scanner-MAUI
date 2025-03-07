@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="scannermaui.Views.ScannerPage"
+             Title="Scanner"
+             BackgroundColor="White"
+             Padding="0">
+
+    <Grid>
+
+
+        <Image Source="qr_code.gif"
+               WidthRequest="250"
+               HeightRequest="250"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               Margin="0,180,0,0"
+               IsAnimationPlaying="True"
+               />
+
+
+        <Frame CornerRadius="15"
+               Padding="0"
+               BackgroundColor="Transparent"
+               WidthRequest="280"
+               HeightRequest="250"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               HasShadow="True">
+
+            <Grid>
+
+                <BoxView x:Name="ScannerLight"
+                         WidthRequest="200"
+                         HeightRequest="8"
+                         BackgroundColor="#007AFF"
+                         Opacity="0.9"
+                         CornerRadius="5"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Start"
+                         TranslationY="0"/>
+
+            </Grid>
+        </Frame>
+
+
+
+        <Button x:Name="ScanButton"
+                Text="🔍 Start Scan"
+                Clicked="OnScanButtonClicked"
+                FontAttributes="Bold"
+                CornerRadius="25"
+                HeightRequest="55"
+                WidthRequest="260"
+                TextColor="White"
+                FontSize="18"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Margin="0,0,0,200">
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#007AFF" Offset="0.1"/>
+                    <GradientStop Color="#34C759" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</ContentPage>
