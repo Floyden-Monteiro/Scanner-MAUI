@@ -19,9 +19,22 @@ A cross-platform mobile application built with .NET MAUI for scanning barcodes a
 
 ## App Showcase
 
-| Login Screen | Scanner Interface | Cart Management |
-|:------------:|:----------------:|:---------------:|
-| ![Login Animation](./screenshot/login.gif) | ![Scanner Animation](./screenshot/scanner.gif) | ![Cart Screen](./screenshot/cart.png) |
+<table width="100%">
+  <tr>
+    <td align="center" width="33%">
+      <h3>Login Screen</h3>
+      <img src="./screenshot/login.gif" width="300px" alt="Login Animation"/>
+    </td>
+    <td align="center" width="33%">
+      <h3>Scanner Interface</h3>
+      <img src="./screenshot/scanner.gif" width="300px" alt="Scanner Animation"/>
+    </td>
+    <td align="center" width="33%">
+      <h3>Cart Management</h3>
+      <img src="./screenshot/cart.png" width="300px" alt="Cart Screen"/>
+    </td>
+  </tr>
+</table>
 
 ## Getting Started
 
